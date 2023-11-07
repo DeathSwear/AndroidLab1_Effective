@@ -18,11 +18,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.androidlab.R
+import com.example.androidlab.ui.theme.MyTextStyle.HeaderCounterStyle
+import com.example.androidlab.ui.theme.MyTextStyle.HeaderTextStyle
 import com.example.androidlab.ui.theme.colorBackground
 import com.example.androidlab.ui.theme.colorDarkGray
 @Preview(showBackground = true)
@@ -52,13 +52,7 @@ fun DotaScreenHeader() {
             ) {
                 Text(
                     text = stringResource(id = R.string.logo_text),
-                    color = androidx.compose.ui.graphics.Color.White,
-                    //fontfamily = Sk-Modernist,
-                    fontSize = 20.sp,
-                    //fontStyle = FontStyle.FONT_WEIGHT_NORMAL,
-                    fontWeight = FontWeight.Bold,
-                    lineHeight = 26.sp,
-                    letterSpacing = 0.5.sp
+                    style = HeaderTextStyle
                 )
                 Row(
                     modifier = Modifier
@@ -77,13 +71,7 @@ fun DotaScreenHeader() {
                         modifier = Modifier
                             .align(Alignment.Bottom)
                             .padding(start = 10.dp),
-                        color = Color(android.graphics.Color.parseColor(colorDarkGray)),
-                        //fontfamily = Sk-Modernist,
-                        fontSize = 12.sp,
-                        //fontStyle = FontStyle.FONT_WEIGHT_NORMAL,
-                        fontWeight = FontWeight.W400,
-                        lineHeight = 26.sp,
-                        letterSpacing = 0.5.sp
+                        style = HeaderCounterStyle
                     )
                 }
             }
@@ -97,7 +85,7 @@ fun DotaScreenHeader() {
                     shape = RoundedCornerShape(20.dp)
                 )
                 .background(
-                    color = androidx.compose.ui.graphics.Color.Black,
+                    color = Color.Black,
                     shape = RoundedCornerShape(20.dp)
                 )
                 .padding(17.dp)

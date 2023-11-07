@@ -11,13 +11,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.example.androidlab.ui.theme.colorDarkGray
+import com.example.androidlab.ui.theme.MyTextStyle.CommentDateStyle
+import com.example.androidlab.ui.theme.MyTextStyle.CommentNameStyle
+import com.example.androidlab.ui.theme.MyTextStyle.CommentTextStyle
 
 @Composable
 fun Comment(image: Int, name: String, date: String, text: String) {
@@ -37,30 +36,18 @@ fun Comment(image: Int, name: String, date: String, text: String) {
             Column {
                 Text(
                     text = name,
-                    color = Color.White,
-                    //fontfamily = Sk-Modernist,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.W400,
-                    letterSpacing = 0.5.sp
+                    style = CommentNameStyle
                 )
                 Spacer(modifier = Modifier.height(7.dp))
                 Text(
                     text = date,
-                    color = Color(android.graphics.Color.parseColor(colorDarkGray)),
-                    //fontfamily = Sk-Modernist,
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.W400,
-                    letterSpacing = 0.5.sp
+                    style = CommentDateStyle
                 )
             }
         }
         Text(
             text = text,
-            color = Color.Gray,
-            //fontfamily = Sk-Modernist,
-            fontSize = 12.sp,
-            fontWeight = FontWeight.W400,
-            letterSpacing = 0.5.sp,
+            style = CommentTextStyle,
             modifier = Modifier.padding(top = 16.dp)
         )
     }
