@@ -11,11 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.androidlab.R
+import com.example.androidlab.ui.theme.MyTextStyle.DescriptionStyle
+import com.example.androidlab.ui.theme.MyTextStyle.RewiewAndRatingsTextStyle
 import com.example.androidlab.ui.theme.colorBackground
 
 @Preview(showBackground = true)
@@ -49,13 +49,7 @@ fun DotaScreen() {
                     top = 14.dp,
                     bottom = 14.dp,
                 ),
-                color = androidx.compose.ui.graphics.Color.Gray,
-                //fontfamily = Sk-Modernist,
-                fontSize = 12.sp,
-                //fontStyle = FontStyle.FONT_WEIGHT_NORMAL,
-                fontWeight = FontWeight.W400,
-                lineHeight = 19.sp,
-                letterSpacing = 0.5.sp
+                style = DescriptionStyle
             )
         }
         item {
@@ -76,13 +70,7 @@ fun DotaScreen() {
                     top = 20.dp,
                     bottom = 12.dp,
                 ),
-                color = androidx.compose.ui.graphics.Color.White,
-                //fontfamily = Sk-Modernist,
-                fontSize = 16.sp,
-                //fontStyle = FontStyle.FONT_WEIGHT_NORMAL,
-                fontWeight = FontWeight.W700,
-                lineHeight = 19.sp,
-                letterSpacing = 0.6.sp
+                style = RewiewAndRatingsTextStyle
             )
             RatingBlock(
                 rating = "4.9",

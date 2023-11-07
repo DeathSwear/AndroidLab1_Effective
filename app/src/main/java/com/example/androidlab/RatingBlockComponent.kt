@@ -8,12 +8,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.androidlab.R
+import com.example.androidlab.ui.theme.MyTextStyle.RatingCounterStyle
+import com.example.androidlab.ui.theme.MyTextStyle.RatingRatingStyle
 
 @Composable
 fun RatingBlock(rating: String, reviewsCount: String, modifier: Modifier) {
@@ -21,12 +20,7 @@ fun RatingBlock(rating: String, reviewsCount: String, modifier: Modifier) {
         Spacer(modifier = Modifier.width(24.dp))
         Text(
             text = rating,
-            color = Color.White,
-            //fontfamily = Sk-Modernist,
-            fontSize = 48.sp,
-            //fontStyle = FontStyle.FONT_WEIGHT_NORMAL,
-            fontWeight = FontWeight.W700,
-            letterSpacing = 0.5.sp
+            style = RatingRatingStyle
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.align(Alignment.CenterVertically)) {
@@ -40,13 +34,7 @@ fun RatingBlock(rating: String, reviewsCount: String, modifier: Modifier) {
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = reviewsCount,
-                color = Color.Gray,
-                //fontfamily = Sk-Modernist,
-                fontSize = 12.sp,
-                //fontStyle = FontStyle.FONT_WEIGHT_NORMAL,
-                fontWeight = FontWeight.W400,
-                lineHeight = 26.sp,
-                letterSpacing = 0.5.sp
+                style = RatingCounterStyle
             )
         }
     }

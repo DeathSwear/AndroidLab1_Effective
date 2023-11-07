@@ -5,9 +5,8 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.example.androidlab.ui.theme.MyTextStyle.ButtonStyle
 
 @Composable
 fun PrimaryOvalButton(text: String, modifier: Modifier = Modifier) {
@@ -19,10 +18,7 @@ fun PrimaryOvalButton(text: String, modifier: Modifier = Modifier) {
     ) {
         Text(
             text = text,
-            color = Color.Black,
-            fontSize = 20.sp,
-            fontWeight = FontWeight.W700,
-            letterSpacing = 0.6.sp
+            style = ButtonStyle
         )
     }
 }
